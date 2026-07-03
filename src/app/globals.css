@@ -1,26 +1,274 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-body);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+
+  /* D&V brand palette exposed as Tailwind color utilities
+     (bg-brand-navy, text-brand-royal, border-brand-silver, etc.) */
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-deep: var(--brand-navy-deep);
+  --color-brand-royal: var(--brand-royal);
+  --color-brand-royal-bright: var(--brand-royal-bright);
+  --color-brand-silver: var(--brand-silver);
+  --color-brand-silver-light: var(--brand-silver-light);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-white: var(--brand-white);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* ---- D&V brand raw tokens (from logo.jpeg) ---- */
+  --brand-navy: #0a2540;          /* azul-marinho profundo (primary) */
+  --brand-navy-deep: #071b33;     /* navy mais escuro p/ gradientes */
+  --brand-royal: #1e5aa8;         /* azul royal */
+  --brand-royal-bright: #2563eb;  /* azul royal vibrante (acento/CTA) */
+  --brand-silver: #9aa7b8;        /* prata */
+  --brand-silver-light: #e5e9f0;  /* prata claro / cromado */
+  --brand-ink: #1f2a37;           /* cinza-texto */
+  --brand-white: #ffffff;
+
+  --background: #ffffff;
+  --foreground: var(--brand-ink);
+  --card: #ffffff;
+  --card-foreground: var(--brand-ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--brand-ink);
+  --primary: var(--brand-navy);
+  --primary-foreground: #ffffff;
+  --secondary: var(--brand-silver-light);
+  --secondary-foreground: var(--brand-navy);
+  --muted: #f1f4f9;
+  --muted-foreground: #5b6b7f;
+  --accent: #eaf1fb;
+  --accent-foreground: var(--brand-navy);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #dbe2ec;
+  --input: #dbe2ec;
+  --ring: var(--brand-royal-bright);
+  --chart-1: var(--brand-navy);
+  --chart-2: var(--brand-royal);
+  --chart-3: var(--brand-royal-bright);
+  --chart-4: var(--brand-silver);
+  --chart-5: var(--brand-silver-light);
+  --radius: 0.75rem;
+  --sidebar: #f7f9fc;
+  --sidebar-foreground: var(--brand-ink);
+  --sidebar-primary: var(--brand-navy);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eaf1fb;
+  --sidebar-accent-foreground: var(--brand-navy);
+  --sidebar-border: #dbe2ec;
+  --sidebar-ring: var(--brand-royal-bright);
+}
+
+.dark {
+  --brand-navy: #0a2540;
+  --brand-navy-deep: #071b33;
+  --brand-royal: #2f6cc0;
+  --brand-royal-bright: #3b82f6;
+  --brand-silver: #9aa7b8;
+  --brand-silver-light: #cdd6e3;
+  --brand-ink: #e8edf4;
+  --brand-white: #ffffff;
+
+  --background: #071b33;
+  --foreground: #e8edf4;
+  --card: #0a2540;
+  --card-foreground: #e8edf4;
+  --popover: #0a2540;
+  --popover-foreground: #e8edf4;
+  --primary: #3b82f6;
+  --primary-foreground: #071b33;
+  --secondary: #12304f;
+  --secondary-foreground: #e8edf4;
+  --muted: #12304f;
+  --muted-foreground: #9aa7b8;
+  --accent: #163a5e;
+  --accent-foreground: #e8edf4;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgb(255 255 255 / 10%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #2f6cc0;
+  --chart-3: #1e5aa8;
+  --chart-4: #9aa7b8;
+  --chart-5: #cdd6e3;
+  --sidebar: #0a2540;
+  --sidebar-foreground: #e8edf4;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #071b33;
+  --sidebar-accent: #163a5e;
+  --sidebar-accent-foreground: #e8edf4;
+  --sidebar-border: rgb(255 255 255 / 10%);
+  --sidebar-ring: #3b82f6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), var(--font-sans), sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   D&V premium brand utilities
+   ============================================================ */
+@layer utilities {
+  /* Deep navy -> royal diagonal gradient (hero / dark sections) */
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      135deg,
+      var(--brand-navy-deep) 0%,
+      var(--brand-navy) 45%,
+      var(--brand-royal) 100%
+    );
+  }
+
+  /* Vibrant CTA gradient */
+  .bg-brand-gradient-cta {
+    background-image: linear-gradient(
+      120deg,
+      var(--brand-royal) 0%,
+      var(--brand-royal-bright) 100%
+    );
+  }
+
+  /* Radial royal glow, ideal como spotlight atrás de conteúdo */
+  .bg-brand-radial {
+    background-image: radial-gradient(
+      120% 120% at 50% 0%,
+      var(--brand-royal) 0%,
+      var(--brand-navy) 55%,
+      var(--brand-navy-deep) 100%
+    );
+  }
+
+  /* Metallic silver/chrome sweep (reflexo cromado da logo) */
+  .bg-silver-gradient {
+    background-image: linear-gradient(
+      145deg,
+      #ffffff 0%,
+      var(--brand-silver-light) 35%,
+      var(--brand-silver) 60%,
+      var(--brand-silver-light) 85%,
+      #ffffff 100%
+    );
+  }
+
+  /* Texto com preenchimento em gradiente da marca */
+  .text-brand-gradient {
+    background-image: linear-gradient(
+      120deg,
+      var(--brand-navy) 0%,
+      var(--brand-royal-bright) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Texto cromado/prata (headline premium sobre fundo escuro).
+     Mantido claro de ponta a ponta para preservar contraste/legibilidade
+     sobre o navy — o brilho metálico vem da variação entre tons claros. */
+  .text-silver-gradient {
+    background-image: linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #eaf0f8 40%,
+      #c4d2e6 74%,
+      #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Glassmorphism card (light) */
+  .glass {
+    background-color: rgb(255 255 255 / 65%);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgb(255 255 255 / 40%);
+  }
+
+  /* Glass sobre fundo navy */
+  .glass-dark {
+    background-color: rgb(10 37 64 / 55%);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgb(255 255 255 / 12%);
+  }
+
+  /* Sombra premium azulada p/ cards e CTAs */
+  .shadow-brand {
+    box-shadow:
+      0 10px 30px -12px rgb(10 37 64 / 35%),
+      0 2px 6px -2px rgb(10 37 64 / 20%);
+  }
+  .shadow-brand-lg {
+    box-shadow:
+      0 24px 60px -18px rgb(10 37 64 / 45%),
+      0 8px 20px -8px rgb(30 90 168 / 30%);
+  }
+
+  /* Borda em gradiente da marca (usar em card wrapper) */
+  .border-brand-gradient {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(120deg, var(--brand-royal), var(--brand-silver)) border-box;
+  }
 }
