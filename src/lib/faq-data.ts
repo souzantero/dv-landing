@@ -13,7 +13,7 @@ export const faqData: { question: string; answer: string }[] = [
   {
     question: "A D&V atende quais regiões?",
     answer:
-      "Atendemos Curitiba e toda a região metropolitana do Paraná. Se o seu condomínio está na capital ou nas cidades vizinhas, fale conosco pelo WhatsApp ou solicite uma proposta: avaliamos cada caso e apresentamos a melhor solução de gestão para o seu condomínio.",
+      "Atendemos Curitiba e São José dos Pinhais. Se o seu condomínio está na capital ou nas cidades vizinhas, fale conosco pelo WhatsApp ou solicite uma proposta: avaliamos cada caso e apresentamos a melhor solução de gestão para o seu condomínio.",
   },
   {
     question:

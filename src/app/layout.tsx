@@ -28,7 +28,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const title = `${siteConfig.name} | Administradora de Condomínios em Curitiba`;
+const title = `${siteConfig.name} | Administradora de Condomínios em Curitiba e São José dos Pinhais`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -49,7 +49,8 @@ export const metadata: Metadata = {
     "síndico profissional Curitiba",
     "administração de condomínios",
     "gestão de condomínios Curitiba",
-    "condomínio região metropolitana de Curitiba",
+    "administradora de condomínios São José dos Pinhais",
+    "síndico profissional São José dos Pinhais",
     "prestação de contas condomínio",
     "D&V Gestão Condominial",
   ],
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} — administradora de condomínios em Curitiba`,
+        alt: `${siteConfig.name} — administradora de condomínios em Curitiba e São José dos Pinhais`,
       },
     ],
   },

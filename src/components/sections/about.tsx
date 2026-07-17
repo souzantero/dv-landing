@@ -112,9 +112,9 @@ export default function About() {
               variants={itemVariants}
               className="mt-6 text-3xl font-bold leading-tight text-brand-navy sm:text-4xl md:text-[2.75rem]"
             >
-              Nascemos para resolver{" "}
+              Surgimos para solucionar{" "}
               <span className="text-brand-gradient">
-                condomínios mal geridos
+                os problemas do seu condomínio
               </span>
             </motion.h2>
 
@@ -125,8 +125,8 @@ export default function About() {
               A D&amp;V Gestão Condominial surgiu de uma inquietação: bons
               condomínios merecem uma gestão à altura. Vimos de perto síndicos
               sobrecarregados, contas sem transparência e moradores sem resposta
-              — e decidimos mudar essa realidade em Curitiba e região
-              metropolitana.
+              — e decidimos mudar essa realidade em Curitiba e São José dos
+              Pinhais.
             </motion.p>
 
             <motion.p
@@ -163,8 +163,8 @@ export default function About() {
                   aria-hidden="true"
                 />
                 <p className="text-sm leading-snug text-brand-ink">
-                  Gestão especializada e transparente, feita para síndicos,
-                  condôminos e construtoras que exigem excelência.
+                  Gestão especializada e transparente, feita para síndicos e
+                  condôminos que exigem excelência.
                 </p>
               </div>
             </motion.div>

@@ -20,7 +20,7 @@ const PROPOSAL_ANCHOR = "#proposta";
 const trustBadges = [
   {
     icon: MapPin,
-    label: "Curitiba e região metropolitana",
+    label: "Curitiba e São José dos Pinhais",
   },
   {
     icon: Sparkles,
@@ -134,7 +134,7 @@ export default function Hero() {
               className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide text-brand-silver-light sm:text-sm"
             >
               <MapPin className="size-4 text-brand-royal-bright" aria-hidden />
-              Administradora de condomínios em Curitiba
+              Administradora de condomínios em Curitiba e São José dos Pinhais
             </motion.span>
 
             <motion.h1
@@ -152,7 +152,8 @@ export default function Hero() {
               className="mt-6 max-w-xl text-base leading-relaxed text-brand-silver-light/90 sm:text-lg"
             >
               Síndico profissional e administração completa para condomínios em
-              Curitiba e região. Nossa equipe cuida de operações, finanças,
+              Curitiba e São José dos Pinhais. Nossa equipe cuida de operações,
+              finanças,
               manutenção e jurídico — você tem a tranquilidade de uma gestão
               premium, humana e sem dor de cabeça.
             </motion.p>
@@ -253,7 +254,7 @@ export default function Hero() {
                   aria-hidden
                 />
                 <p className="text-sm leading-snug">
-                  Gestão premium para síndicos, condôminos e construtoras.
+                  Gestão premium para condomínios.
                 </p>
               </div>
             </motion.div>

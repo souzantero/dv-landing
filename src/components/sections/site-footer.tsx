@@ -152,7 +152,7 @@ export default function SiteFooter() {
             </Link>
 
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-brand-silver">
-              Administradora de condomínios em Curitiba e região metropolitana.
+              Administradora de condomínios em Curitiba e São José dos Pinhais.
               Unimos síndico profissional, gestão financeira transparente e
               tecnologia para condomínios bem cuidados e valorizados.
             </p>
@@ -278,7 +278,7 @@ export default function SiteFooter() {
                     Atendimento
                   </span>
                   <span className="font-medium text-brand-silver-light">
-                    Curitiba e região metropolitana — PR
+                    Curitiba e São José dos Pinhais
                   </span>
                 </span>
               </li>

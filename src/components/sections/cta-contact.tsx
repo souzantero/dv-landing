@@ -132,7 +132,7 @@ export default function CtaContact() {
         <motion.div variants={item} className="mb-8">
           <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-silver-light uppercase">
             <span className="size-1.5 rounded-full bg-brand-royal-bright" aria-hidden="true" />
-            Atendimento em Curitiba e região
+            Atendimento em Curitiba e São José dos Pinhais
           </span>
         </motion.div>
 

@@ -14,7 +14,7 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dvgestaocondominial.com.br"
   ).replace(/\/$/, ""),
   description:
-    "Administradora de condomínios em Curitiba e região metropolitana. Síndico profissional e administração completa com qualidade, agilidade e transparência.",
+    "Administradora de condomínios em Curitiba e São José dos Pinhais. Síndico profissional e administração completa com qualidade, agilidade e transparência.",
   locale: "pt-BR",
   logo: "/logo.jpeg",
   ogImage: "/logo.jpeg",
@@ -27,7 +27,7 @@ export const siteConfig = {
     whatsapp: "https://wa.me/5541995803372",
   },
 
-  areaServed: ["Curitiba", "Região Metropolitana de Curitiba", "Paraná"],
+  areaServed: ["Curitiba", "São José dos Pinhais", "Paraná"],
 
   social: {
     instagram: "https://www.instagram.com/dvcondominios",
