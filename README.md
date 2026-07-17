@@ -51,7 +51,7 @@ O formulário envia um `POST` para `/api/proposal`. A rota valida os dados com
 
 | Variável              | Obrigatória | Descrição                                                        |
 | --------------------- | ----------- | ---------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL`| não         | URL canônica pública (SEO/OG/sitemap). Padrão: placeholder.      |
+| `NEXT_PUBLIC_SITE_URL`| não         | URL canônica pública (SEO/OG/sitemap). Padrão: `https://www.dvcondominios.com.br`. |
 | `SMTP_HOST`           | sim\*       | Host SMTP (ex.: `smtp.gmail.com`).                               |
 | `SMTP_PORT`           | sim\*       | Porta (`465` SSL ou `587` STARTTLS).                             |
 | `SMTP_USER`           | sim\*       | Usuário/login SMTP.                                              |
@@ -105,7 +105,7 @@ src/
 - Metadata completa (`title`, `description`, `keywords`, canonical, `robots`).
 - Open Graph e Twitter Card (imagem: `/logo.jpeg`).
 - JSON-LD com `Organization`/`LocalBusiness`/`ProfessionalService` (área de
-  atuação Curitiba e região metropolitana, telefone/WhatsApp, e-mail e
+  atuação Curitiba e São José dos Pinhais, telefone/WhatsApp, e-mail e
   `sameAs` do Instagram e LinkedIn) e `FAQPage`.
 - `sitemap.xml` e `robots.txt` gerados dinamicamente a partir de
   `NEXT_PUBLIC_SITE_URL`.

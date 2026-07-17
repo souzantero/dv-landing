@@ -2,16 +2,15 @@
  * Configuração central do site — usada em metadata (SEO), JSON-LD,
  * sitemap, robots e componentes de contato.
  *
- * A URL canônica pode ser sobrescrita por ambiente com NEXT_PUBLIC_SITE_URL
- * (ex.: em produção defina https://www.seudominio.com.br). O fallback abaixo
- * é um placeholder — ajuste-o quando o domínio definitivo estiver contratado.
+ * A URL canônica pode ser sobrescrita por ambiente com NEXT_PUBLIC_SITE_URL.
+ * O fallback abaixo é o domínio oficial de produção.
  */
 export const siteConfig = {
   name: "D&V Gestão Condominial",
   shortName: "D&V",
   legalName: "D&V Gestão Condominial",
   url: (
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dvgestaocondominial.com.br"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dvcondominios.com.br"
   ).replace(/\/$/, ""),
   description:
     "Administradora de condomínios em Curitiba e São José dos Pinhais. Síndico profissional e administração completa com qualidade, agilidade e transparência.",
